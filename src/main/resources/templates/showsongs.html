@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head th:replace="base::header">
+
+</head>
+<body>
+
+<div th:replace="base::mynavbar"></div>
+
+<div th:each="song : ${songs}">
+
+    <h2 th:text="${song.title}"></h2>
+    <h2 th:text="${song.year}"></h2>
+
+</div>
+<!--<ul>-->
+<!--<li class="nav-item dropdown">-->
+    <!--<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Song</a>-->
+    <!--<div class="dropdown-menu">-->
+        <!--<a class="dropdown-item" href="Title"></a>-->
+    <!--</div>-->
+<!--</li>-->
+<!--</ul>-->
+<div th:replace="base::scripts"></div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:fragment="header">
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+</head>
+
+<body>
+
+
+<li class="nav-item" th:classappend="${menuoption}=='home'?'active':''">
+    <a class="nav-link"  href="/">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item" th:classappend="${menuoption}=='firstlink'?'active':''">
+    <a class="nav-link"  href="/firstlink">Link</a>
+</li>
+
+
+<!--<div th:fragment="mynavbar">
+
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link"  href="/addartist">Add a Artist</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/addsong">Add a Song</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/showartists">Artist</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/showsongs">Song</a>
+        </li>
+
+        <div class="tab-content">
+            <div class="tab-pane active container" id="/addartist">...</div>
+            <div class="tab-pane container" id="/addsong">...</div>
+            <div class="tab-pane container" id="/showartists">...</div>
+            <div class="tab-pane container" id="/showsongs">...</div>
+        </div>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Select</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Redemption</a>
+                <a class="dropdown-item" href="#">Dont worry be Happy</a>
+                <a class="dropdown-item" href="#">Buffalu Soldier</a>
+            </div>
+        </li>
+    </ul>
+</div>-->
+
+
+<div th:fragment="mynavbar">
+
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-secondary">
+    <ul class="nav nav-pills">
+    <li class="nav-item" th:classappend="${menuoption}=='Add an Artist'?'active':''">
+        <a class="nav-link"  href="/addartist">Add a Artist<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item" th:classappend="${menuoption}=='Add a Song'?'active':''">
+        <a class="nav-link" href="/addsong">Add a Song</a>
+    </li>
+    <li class="nav-item" th:classappend="${menuoption}=='Artists'?'active':''">
+        <a class="nav-link " href="/showartists">Artists</a>
+    </li>
+    <li class="nav-item" th:classappend="${menuoption}=='Songs'?'active':''">
+        <a class="nav-link" href="/showsongs">Songs</a>
+    </li>
+
+        <!--<div class="tab-content">-->
+            <!--<div class="tab-pane active container" id="/addartist">...</div>-->
+            <!--<div class="tab-pane container" id="/addsong">...</div>-->
+            <!--<div class="tab-pane container" id="/showartists">...</div>-->
+            <!--<div class="tab-pane container" id="/showsongs">...</div>-->
+        <!--</div>-->
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Select</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Redemption</a>
+            <a class="dropdown-item" href="#">Dont worry be Happy</a>
+            <a class="dropdown-item" href="#">Buffalu Soldier</a>
+        </div>
+    </li>
+    </ul>
+    </nav>
+</ul>
+</div>
+<div th:fragment="scripts">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

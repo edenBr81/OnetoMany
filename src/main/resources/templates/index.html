@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="base::header">
+
+</head>
+<body>
+
+<div th:replace="base::mynavbar"></div>
+
+
+<div th:each="artist : ${artist}">
+
+    <h2 th:text="${artist.name}"></h2>
+    <h2 th:text="${artist.stagename}"></h2>
+    <h6 th:inline="text">speciliazing in[[${artist.genre}]]</h6>
+   <!-- Setting default image-->
+    <img class="listimg" th:src="(${artist.image}==null)?'https://i.ytimg.com/vi/gODh1nsHlPg/hqdefault.jpg':${artist.image}"/>
+
+
+    <ul>
+        <th:block th:each="song : ${artist.songs}">
+            <li th:inline="text"><b>[[${song.title}]]</b> released in [[${song.year}]].</li>
+        </th:block>
+    </ul>
+
+</div>
+
+<div th:replace="base::scripts"></div>
+</body>
+</html>
